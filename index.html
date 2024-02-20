@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>NOURISH CONNECT</title>
+    <style>
+        body {
+            background-image: url("img1.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            padding: 15px 0;
+        }
+        nav {
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .hero-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            color:white;
+            text-shadow: #333;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="volunteerform.html">Volunteers</a></li>
+                <li><a href="donorform.html">Donors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-container">
+        <h1>NOURISH CONNECT</h1>
+        <p>Connecting donors with volunteers to make a difference in the community.</p>
+    </div>
+    <h2>LOGIN AS:</h2>
+    <div class="button-container">
+        <button onclick="window.location.href='volunteerform.html'">Volunteer</button>
+        <button onclick="window.location.href='donorform.html'">Donor</button>
+    </div>
+</body>
+</html>

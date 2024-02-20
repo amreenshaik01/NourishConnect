@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Volunteer Login</title>
+    <style>
+        body {
+            background-image: url("img2.jpg"); 
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        .success-message {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Volunteer Login</h2>
+        <form onsubmit="return validatePassword()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="error-message" id="password-error"></div>
+            <div class="success-message" id="success-message"></div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+
+            // Check if the password contains at least one uppercase letter and one special symbol
+            if (!/[A-Z]/.test(password) || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                document.getElementById('password-error').innerHTML = "Password must contain at least one uppercase letter and one special symbol.";
+                document.getElementById('success-message').innerHTML = ""; // Reset success message
+                return false;
+            }
+
+            // Display success message if validation is successful
+            document.getElementById('password-error').innerHTML = "";
+            document.getElementById('success-message').innerHTML = "Successfully logged in!";
+            setTimeout(function() {
+            window.location.href = 'final0.html';
+        }, 2000); // Adjust the time delay as needed
+
+        return false;
+        }
+    </script>
+</body>
+</html>
